@@ -13,11 +13,9 @@ if gui == nil then
 	warn("Bulk Rename Gui not found!")
 end
 
-
 local main = gui:WaitForChild("Main")
 local ActivationButtons = main.EnableButtonFrame 
 local closeButton = main.PluginTitleFrame.CloseButton
-
 
 local function renameInstances(intances)
 	for i, v in pairs(intances) do
@@ -25,9 +23,6 @@ local function renameInstances(intances)
 	end
 	HistoryService:SetWaypoint("Changed Instance Names.")
 end
-
-
-
 
 local function onSelectionConnection()
 	if gui.Parent == game:WaitForChild("CoreGui") then
